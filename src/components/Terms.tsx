@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function Terms() {
   return (
-    <div className="p-20 pt-[120px]">
+    <div className="max-w-[780px] mx-auto px-6 pt-[120px] pb-20 max-md:px-5 max-md:pt-[90px]">
       <Link to="/" className="inline-flex items-center gap-2 text-text3 no-underline text-sm font-medium mb-10 transition-colors duration-200 hover:text-text">
         ← Back to Pulse
       </Link>

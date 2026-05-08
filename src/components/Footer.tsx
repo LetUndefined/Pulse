@@ -7,7 +7,7 @@ export default function Footer() {
         PULSE<span className="text-neon">.</span>
       </div>
       <p className="text-[13px] text-text3">© 2026 Pulse. All rights reserved.</p>
-      <nav className="max-md:hidden">
+      <nav>
         <ul className="flex gap-6 list-none">
           <li>
             <Link to="/privacy" className="text-text2 no-underline text-sm font-medium transition-colors duration-200 hover:text-text">

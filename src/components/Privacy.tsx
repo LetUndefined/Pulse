@@ -9,7 +9,7 @@ const THIRD_PARTIES = [
 
 export default function Privacy() {
   return (
-    <div className=" p-20 bg-bg mx-auto ">
+    <div className="max-w-[780px] mx-auto px-6 pt-[120px] pb-20 max-md:px-5 max-md:pt-[90px]">
       <Link to="/" className="inline-flex items-center gap-2 text-text3 no-underline text-sm font-medium mb-10 transition-colors duration-200 hover:text-text">
         ← Back to Pulse
       </Link>
