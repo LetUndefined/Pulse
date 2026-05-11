@@ -9,12 +9,22 @@ export default function DeleteAccount() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Opens the user's mail client with a pre-filled deletion request
-    window.location.href = `mailto:sandroodangelo@hotmail.com?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20Pulse%20account%20associated%20with%20the%20email%20address%3A%20${encodeURIComponent(email)}%0A%0AI%20understand%20that%20this%20will%20permanently%20delete%20my%20profile%2C%20friend%20connections%2C%20and%20event%20history.`;
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const res = await fetch(
+        "https://icduqwzukahhcufyiesf.supabase.co/functions/v1/request-account-deletion",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }
+      );
+      if (!res.ok) throw new Error("Request failed");
       setSubmitted(true);
-    }, 500);
+    } catch {
+      alert("Something went wrong. Please try again or contact sandroodangelo@hotmail.com.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -56,9 +66,9 @@ export default function DeleteAccount() {
         {submitted ? (
           <div className="bg-bg border border-neon/30 rounded-[16px] px-7 py-8 flex flex-col gap-3">
             <div className="text-neon text-[22px]">✓</div>
-            <p className="text-[15px] text-text font-semibold">Request sent</p>
+            <p className="text-[15px] text-text font-semibold">Check your email</p>
             <p className="text-[15px] text-text2 leading-[1.8]">
-              Your deletion request has been submitted. We'll process it within 5 business days and confirm via email.
+              We've sent a confirmation link to <strong className="text-text">{email}</strong>. Click the link in the email to permanently delete your account. The link expires in 24 hours.
             </p>
           </div>
         ) : (

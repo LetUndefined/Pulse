@@ -5,6 +5,7 @@ import NavLayout from "./layouts/NavLayout";
 import PolicyPage from "../views/PolicyPage";
 import TermsPage from "../views/TermsPage";
 import DeleteAccountPage from "../views/DeleteAccountPage";
+import DeleteAccountConfirmedPage from "../views/DeleteAccountConfirmedPage";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   { path: "/privacy", Component: PolicyPage },
   { path: "/terms", Component: TermsPage },
   { path: "/delete-account", Component: DeleteAccountPage },
+  { path: "/delete-account/confirmed", Component: DeleteAccountConfirmedPage },
 ]);
 
 function App() {
