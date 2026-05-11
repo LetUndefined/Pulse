@@ -24,6 +24,11 @@ export default function Footer() {
               Partners
             </a>
           </li>
+          <li>
+            <Link to="/delete-account" className="text-text2 no-underline text-sm font-medium transition-colors duration-200 hover:text-text">
+              Delete account
+            </Link>
+          </li>
         </ul>
       </nav>
     </footer>

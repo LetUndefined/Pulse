@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router";
 import NavLayout from "./layouts/NavLayout";
 import PolicyPage from "../views/PolicyPage";
 import TermsPage from "../views/TermsPage";
+import DeleteAccountPage from "../views/DeleteAccountPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
   },
   { path: "/privacy", Component: PolicyPage },
   { path: "/terms", Component: TermsPage },
+  { path: "/delete-account", Component: DeleteAccountPage },
 ]);
 
 function App() {
