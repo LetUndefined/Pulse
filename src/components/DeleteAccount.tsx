@@ -14,7 +14,10 @@ export default function DeleteAccount() {
         "https://icduqwzukahhcufyiesf.supabase.co/functions/v1/request-account-deletion",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer sb_publishable_yTIh3abP2ykVyY8GoQ9KPA_wnW0pyDP",
+          },
           body: JSON.stringify({ email }),
         }
       );
