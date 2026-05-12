@@ -1,4 +1,4 @@
-import showcase from "@/assets/pulse-app-showcase1.png";
+import showcase from "../assets/pulse-app-showcase1.png";
 
 export default function AppShowcase() {
   return (
