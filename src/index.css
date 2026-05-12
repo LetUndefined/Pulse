@@ -1,23 +1,36 @@
 @import "tailwindcss";
 
 @theme {
+  --color-black: #000000;
   --color-bg: #1c1c26;
-  --color-bg2: #0E0E14;
+  --color-bg2: #0e0e14;
   --color-bg3: #111119;
-  --color-neon: #C6FF4E;
-  --color-violet: #9B6CFF;
-  --color-text: #F4F2EF;
-  --color-text2: rgba(244,242,239,0.72);
-  --color-text3: rgba(244,242,239,0.48);
-  --color-border: rgba(244,242,239,0.1);
-  --font-grotesk: 'Space Grotesk', sans-serif;
-  --font-inter: 'Inter', sans-serif;
+  --color-neon: #c6ff4e;
+  --color-pink: #ff2d55;
+  --color-cyan: #00c8ff;
+  --color-violet: #9b6cff;
+  --color-text: #f4f2ef;
+  --color-text2: rgba(244, 242, 239, 0.72);
+  --color-text3: rgba(244, 242, 239, 0.48);
+  --color-border: rgba(244, 242, 239, 0.1);
+  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-inter); background-color: var(--color-bg); }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-bg);
+}
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
