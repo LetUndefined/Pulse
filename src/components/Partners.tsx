@@ -1,4 +1,4 @@
-import { LuMapPin, LuLayoutDashboard, LuTicket, LuChartBar, LuRocket } from "react-icons/lu";
+import { LuMapPin, LuLayoutDashboard, LuTicket, LuRocket } from "react-icons/lu";
 import type { ReactNode } from "react";
 
 interface PerkProps {
@@ -22,11 +22,6 @@ const PERKS: PerkProps[] = [
     icon: <LuTicket size={16} />,
     title: "Ticket link integration",
     description: "Link directly to your ticketing platform so users can buy without leaving Pulse.",
-  },
-  {
-    icon: <LuChartBar size={16} />,
-    title: "Audience insights",
-    description: "See how many people viewed your event, marked themselves as going, or clicked your ticket link.",
   },
 ];
 

@@ -5,21 +5,12 @@ interface FeatureCardProps {
   icon: ReactNode;
   title: string;
   description: string;
-  accent: "neon" | "pink" | "cyan" | "violet";
 }
 
-const ACCENT_STYLES: Record<FeatureCardProps["accent"], { bg: string; text: string; border: string }> = {
-  neon:   { bg: "bg-neon/10",   text: "text-neon",   border: "hover:border-neon/30"   },
-  pink:   { bg: "bg-pink/10",   text: "text-pink",   border: "hover:border-pink/30"   },
-  cyan:   { bg: "bg-cyan/10",   text: "text-cyan",   border: "hover:border-cyan/30"   },
-  violet: { bg: "bg-violet/10", text: "text-violet", border: "hover:border-violet/30" },
-};
-
-function FeatureCard({ icon, title, description, accent }: FeatureCardProps) {
-  const s = ACCENT_STYLES[accent];
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
-    <div className={`bg-bg border border-border rounded-[20px] p-7 transition-colors duration-200 ${s.border}`}>
-      <div className={`w-11 h-11 rounded-[12px] ${s.bg} flex items-center justify-center ${s.text} mb-4`}>{icon}</div>
+    <div className="bg-bg border border-border rounded-[20px] p-7 transition-colors duration-200 hover:border-cyan/30">
+      <div className="w-11 h-11 rounded-[12px] bg-cyan/10 flex items-center justify-center text-cyan mb-4">{icon}</div>
       <h3 className="font-grotesk text-[18px] font-bold mb-2 text-text">{title}</h3>
       <p className="text-[14px] text-text2 leading-[1.6]">{description}</p>
     </div>
@@ -31,37 +22,31 @@ const FEATURES: FeatureCardProps[] = [
     icon: <LuMap size={20} />,
     title: "Live map",
     description: "See every event around you on an interactive map, colour-coded by genre so you can find what you're into instantly.",
-    accent: "neon",
   },
   {
     icon: <LuCalendar size={20} />,
     title: "Date filtering",
     description: "Pick a date range and the map updates in real time. Planning a weekend away? Filter to exactly those days.",
-    accent: "cyan",
   },
   {
     icon: <LuUsers size={20} />,
     title: "Kids mode",
     description: "Toggle kids mode to instantly switch to family-friendly events only — festivals, open days, and more.",
-    accent: "violet",
   },
   {
     icon: <LuUsersRound size={20} />,
     title: "Friends",
     description: "See which events your friends are going to. Add friends with a PULSE code and make plans together.",
-    accent: "pink",
   },
   {
     icon: <LuTicket size={20} />,
     title: "Buy tickets",
     description: "Tap any event to see details and buy tickets directly. No redirects, no friction.",
-    accent: "neon",
   },
   {
     icon: <LuZap size={20} />,
     title: "Always fresh",
     description: "Events are pulled from multiple sources and refreshed regularly so you're always seeing the latest listings.",
-    accent: "cyan",
   },
 ];
 
