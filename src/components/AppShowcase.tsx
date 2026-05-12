@@ -1,3 +1,5 @@
+import showcase from "@/assets/pulse-app-showcase1.png";
+
 export default function AppShowcase() {
   return (
     <section className="bg-black border-t border-border  px-6 pt-20 overflow-hidden">
@@ -10,7 +12,7 @@ export default function AppShowcase() {
         </h2>
       </div>
 
-      <img src="src/assets/pulse-app-showcase1.png" className="h-full w-full" />
+      <img src={showcase} className="h-full w-full" />
     </section>
   );
 }
