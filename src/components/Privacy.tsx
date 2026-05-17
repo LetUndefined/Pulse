@@ -18,7 +18,7 @@ export default function Privacy() {
       <h1 className="font-grotesk font-bold tracking-[-1px] text-text mb-2" style={{ fontSize: "clamp(32px, 5vw, 52px)" }}>
         Privacy Policy
       </h1>
-      <p className="text-[13px] text-text3 italic mb-12 pb-6 border-b border-border">Last updated: May 8, 2026</p>
+      <p className="text-[13px] text-text3 italic mb-12 pb-6 border-b border-border">Last updated: May 17, 2026</p>
 
       <div className="mb-10">
         <h2 className="font-grotesk text-[18px] font-bold text-text mb-3 pb-2 border-b-2 border-neon/30 tracking-normal">1. Who we are</h2>
@@ -55,6 +55,24 @@ export default function Privacy() {
             </li>
           ))}
         </ul>
+        <p className="text-[15px] text-text2 leading-[1.8] mb-3">
+          <strong className="text-text">When you submit a local event (partner accounts only):</strong>
+        </p>
+        <ul className="list-none p-0 my-2 mb-3 flex flex-col gap-2">
+          {[
+            "Event title, category, and description",
+            "Event dates and times",
+            "Event address and location",
+            "Ticket URL and price",
+            "Event flyer image (uploaded and stored in our media storage)",
+            "Whether the event is child-friendly",
+          ].map((item) => (
+            <li key={item} className="text-[15px] text-text2 leading-[1.7] pl-5 relative before:content-['—'] before:absolute before:left-0 before:text-neon before:font-bold">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p className="text-[15px] text-text2 leading-[1.8] mb-3">Submitted events and their images are publicly visible to all users of the app on the map.</p>
         <p className="text-[15px] text-text2 leading-[1.8] mb-3">Without an account, we create an anonymous session only. No personal information is collected.</p>
       </div>
 
@@ -67,6 +85,7 @@ export default function Privacy() {
             { label: "Account info", text: "— to identify you, display your profile, and connect you with friends." },
             { label: "Events data", text: "— to show your plans and let friends see what you're attending." },
             { label: "Email", text: "— password reset and account notifications only. No marketing emails." },
+            { label: "Submitted events", text: "— to display your events on the map for all users. Submitted event content (including images) is stored on our servers and publicly visible inside the app." },
           ].map(({ label, text }) => (
             <li key={label} className="text-[15px] text-text2 leading-[1.7] pl-5 relative before:content-['—'] before:absolute before:left-0 before:text-neon before:font-bold">
               <strong className="text-text">{label}</strong> {text}
@@ -79,6 +98,7 @@ export default function Privacy() {
       <div className="mb-10">
         <h2 className="font-grotesk text-[18px] font-bold text-text mb-3 pb-2 border-b-2 border-neon/30 tracking-normal">4. What we share</h2>
         <p className="text-[15px] text-text2 leading-[1.8] mb-3">Your username and events you mark as "going" are visible to your friends inside the app.</p>
+        <p className="text-[15px] text-text2 leading-[1.8] mb-3">Events submitted by partner accounts — including the event title, details, address, and flyer image — are publicly visible to all users of the app.</p>
         <p className="text-[15px] text-text2 leading-[1.8] mb-3">We do not sell, rent, or trade your personal data to any third party.</p>
         <p className="text-[15px] text-text2 leading-[1.8] mb-3">
           <strong className="text-text">Third-party services we use:</strong>
@@ -112,7 +132,7 @@ export default function Privacy() {
       <div className="mb-10">
         <h2 className="font-grotesk text-[18px] font-bold text-text mb-3 pb-2 border-b-2 border-neon/30 tracking-normal">5. How long we keep your data</h2>
         <p className="text-[15px] text-text2 leading-[1.8] mb-3">
-          We keep your data for as long as your account is active. If you delete your account, all personal data — including your profile, friend connections, and event history — is permanently deleted immediately.
+          We keep your data for as long as your account is active. If you delete your account, all personal data — including your profile, friend connections, event history, and any events you submitted along with their images — is permanently deleted immediately.
         </p>
       </div>
 
